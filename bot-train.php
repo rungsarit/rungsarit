@@ -1,5 +1,5 @@
 <?php
-//require('./db/connect-db.php');//เรียกใช้ file connect-db
+require('./db/connect-db.php');//เรียกใช้ file connect-db
 function reply_msg($text,$replyToken)//สร้างข้อความและตอบกลับ
 {
     $access_token = 'rTiapLTEa/S30KaerJzstyD1vxZIbyrNWPetjdw1vAjG9gQdZX8DjgzK+ZE3YUtFZcwnQTvNTt+tdmQ+Ek6/YGqjxRGz08p5giyGSZK31nPtkLVD75WgYB/vsgb+/cZZit2RjAI4iR3at9MqZj6HJAdB04t89/1O/w1cDnyilFU=';
