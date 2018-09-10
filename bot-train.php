@@ -1,5 +1,5 @@
 <?php
-require('./db/connect-db.php');//เรียกใช้ file connect-db
+//require('./db/connect-db.php');//เรียกใช้ file connect-db
 function reply_msg($text,$replyToken)//สร้างข้อความและตอบกลับ
 {
     $access_token = 'rTiapLTEa/S30KaerJzstyD1vxZIbyrNWPetjdw1vAjG9gQdZX8DjgzK+ZE3YUtFZcwnQTvNTt+tdmQ+Ek6/YGqjxRGz08p5giyGSZK31nPtkLVD75WgYB/vsgb+/cZZit2RjAI4iR3at9MqZj6HJAdB04t89/1O/w1cDnyilFU=';
@@ -35,6 +35,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             $source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
             $txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
             $first_char = substr($txtin,0,1);//ตัดเอาเฉพาะตัวอักษรตัวแรก
+	    reply_msg($txtin,$replyToken);//เรียกใช้ function
   	    if($first_char == "@")
 			{
 				$office_id = substr($txtin,1,3);///ได้รหัสการไฟฟ้า 
