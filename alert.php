@@ -19,14 +19,14 @@ function push_msg($group_id)
     $result = curl_exec($ch);
     curl_close($ch);  
 }
-require('./db/connect-db.php');
+/*require('./db/connect-db.php');
 $sql = "SELECT * FROM tbl_office";
 $query = mysqli_query($conn,$sql);
 while($obj = mysqli_fetch_array($query))
 {
     echo $obj["office_name"]."<br>";
 
-}
+}*/
 $group_id ="Ccd9652f5c7325dac8f78719ec74d6be0";
 push_msg($group_id);
 
